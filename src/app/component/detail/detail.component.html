@@ -1,0 +1,23 @@
+<div class="repository-details">
+    <div class="repository-header">
+        <img class="repository-avatar" [src]="ownerAvatarUrl" alt="Repository Owner's Avatar">
+        <h1 class="repository-title">{{ repositoryName }}</h1>
+        <span class="repository-owner">Owner: {{ owner }}</span>
+    </div>
+
+    <div class="repository-stats">
+        <div class="stat">
+            <span class="value">{{ openIssues }}</span>
+            <span class="label">Open Issues</span>
+        </div>
+        <div class="stat">
+            <span class="value">{{ defaultBranch }}</span>
+            <span class="label">Default Branch</span>
+        </div>
+    </div>
+
+    <div class="readme">
+        <h2>README.md</h2>
+        <div class="readme-content" [innerHTML]="readmeContent"></div>
+    </div>
+</div>

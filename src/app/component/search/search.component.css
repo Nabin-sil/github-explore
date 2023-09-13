@@ -1,0 +1,121 @@
+/* Add this CSS to your styles.css or a separate .css file */
+
+/* Overall container styling */
+.search {
+    background-color: #f6f8fa;
+    padding: 20px;
+    border-bottom: 1px solid #e1e4e8;
+  }
+  
+  /* Search input styling */
+  .search-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #d1d5da;
+    border-radius: 6px;
+  }
+  
+  .search-button {
+    background-color: #0366d6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  /* Search options styling */
+  .search-options {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .search-options label {
+    margin-right: 10px;
+    color: #586069;
+  }
+  
+  /* Repository item styling */
+  .repository-item {
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  .repository-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .repository-description {
+    color: #586069;
+    margin-bottom: 10px;
+  }
+  
+  /* Repository details styling */
+  .repository-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .repository-stats span {
+    margin-right: 20px;
+    color: #586069;
+  }
+  
+  .repository-owner {
+    display: flex;
+    align-items: center;
+    color: #586069;
+  }
+  
+  .repository-owner img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .last-updated {
+    color: #586069;
+  }
+  
+  /* Pagination styling */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .page-button {
+    background-color: #0366d6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .page-button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Add this CSS to your styles.css or a separate .css file */
+.repository-avatar {
+  width: 50px; /* Adjust the desired width */
+  height: 50px; /* Adjust the desired height */
+  border-radius: 50%; /* Make it round for avatar effect */
+  margin-right: 10px; /* Add spacing between the avatar and repository details */
+}

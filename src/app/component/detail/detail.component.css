@@ -1,0 +1,90 @@
+
+.repository-avatar {
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  margin-right: 10px; 
+}
+
+/* Overall container styling */
+.repository-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  /* Repository header styling */
+  .repository-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .repository-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .repository-owner {
+    font-size: 16px;
+    color: #586069;
+  }
+  
+  /* Repository stats styling */
+  .repository-stats {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e1e4e8;
+    border-bottom: 1px solid #e1e4e8;
+    padding: 10px 0;
+    margin: 20px 0;
+  }
+  
+  .stat {
+    text-align: center;
+  }
+  
+  .value {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .label {
+    font-size: 14px;
+    color: #586069;
+  }
+  
+.readme {
+  background-color: #f6f8fa; /* GitHub's README background color */
+  border: 1px solid #e1e4e8; /* GitHub's README border */
+  padding: 16px;
+  margin-top: 20px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* GitHub-like shadow */
+}
+
+.readme h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.readme-content {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.readme-content a {
+  color: #0366d6; /* GitHub link color */
+  text-decoration: none;
+}
+
+.readme-content a:hover {
+  text-decoration: underline;
+}
+

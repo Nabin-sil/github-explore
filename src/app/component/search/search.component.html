@@ -1,0 +1,49 @@
+<div class="search">
+    <h2>GitHub Repository Explorer</h2>
+    <div class="search-input">
+        <input type="text" placeholder="Find a repository..." [(ngModel)]="searchQuery">
+        <button class="search-button" (click)="searchRepositories()">Search</button>
+    </div>
+    <div class="search-options">
+        <label for="sorting">Sort:</label>
+        <select id="sorting" [(ngModel)]="sortCriteria">
+            <option value="best-match">Best Match</option>
+            <option value="stars">Stars</option>
+            <!-- Add other sort options -->
+        </select>
+        <label for="results-per-page">Results per page:</label>
+        <select id="results-per-page" [(ngModel)]="resultsPerPage">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+        </select>
+    </div>
+</div>
+
+
+<div class="results">
+    <div *ngFor="let repository of repositories" class="repository-item">
+        <img class="repository-avatar" [src]="repository.owner.avatar_url" alt="Repository Owner's Avatar">
+        <div class="repository-details">
+            <h3><a [routerLink]="['/detail', repository.owner.login, repository.name]">{{ repository.name }}</a></h3>
+            <div class="author-info">
+                <p><strong>Author:</strong> <a [routerLink]="['/detail', repository.owner.login, repository.name]">{{
+                        repository.owner.login }}</a></p>
+                <p><strong>Last Update:</strong> {{ repository.updated_at | date: 'short' }}</p>
+            </div>
+            <div class="repository-stats">
+                <p><strong>Stars:</strong> {{ repository.stargazers_count }} <i class="fa fa-star"></i></p>
+                <p><strong>Watchers:</strong> {{ repository.watchers_count }} <i class="fa fa-eye"></i></p>
+                <p><strong>Forks:</strong> {{ repository.forks_count }} <i class="fa fa-code-fork"></i></p>
+            </div>
+            <p class="repository-description">{{ repository.description }}</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="pagination">
+    <button class="page-button" (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+    <span>{{ currentPage }} / {{ totalPages }}</span>
+    <button class="page-button" (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+</div>
